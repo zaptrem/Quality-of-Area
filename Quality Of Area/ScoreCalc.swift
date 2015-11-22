@@ -16,7 +16,7 @@ let filePath = NSBundle.mainBundle().pathForResource("nyccrimedata2015", ofType:
 let data =  NSData(contentsOfFile: filePath!)
 let json = JSON(data: data!)
 let actualData = json["features"]
-//End JSON decode code
+//Loop creates an array of coordinate arrays.
     let looper = actualData.count
     
     var crimeCoords:Array = [JSON]()
@@ -27,7 +27,8 @@ let actualData = json["features"]
         
         crimeCoords.append((actualData[index]["geometry"]["coordinates"]))
 
-        print(actualData[index]["geometry"]["coordinates"])
+        //DEBUG: Prints the coord array (as it is being made?)
+        //print(actualData[index]["geometry"]["coordinates"])
         
     
         
@@ -35,3 +36,6 @@ let actualData = json["features"]
     return crimeCoords
 
 }
+//func getCrimesWithinMile(loc: CLLocationCoordinate2D) -> Int {
+    // Return number of crimes reported within a mi le of given coordinates
+//}
