@@ -12,13 +12,23 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        //JSON decode code
         let filePath = NSBundle.mainBundle().pathForResource("nyccrimedata2015", ofType: "json")
         let data =  NSData(contentsOfFile: filePath!)
         let json = JSON(data: data!)
-        var actualData = json["data"]
-        // Do any additional setup after loading the view, typically from a nib.
+        //print(json["features"])
+        //how do I print a dictionary
+        let actualData = json["features"]
+        //End JSON decode code
+        //print(actualData[2]["geometry"]["coordinates"])
+
+        
         print("hello world.")
-        print(actualData)
+        //print(actualData)
+        //print(getCrimeCoords())
+        
     }
 
     override func didReceiveMemoryWarning() {
