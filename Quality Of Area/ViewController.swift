@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         var actualData = json["data"]
         // Do any additional setup after loading the view, typically from a nib.
         print("hello world.")
-        print()
+        print(actualData)
     }
 
     override func didReceiveMemoryWarning() {
