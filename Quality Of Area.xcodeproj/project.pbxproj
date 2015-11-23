@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B63D738C1C0356630092DFCC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63D738B1C0356630092DFCC /* MapKit.framework */; };
 		B65706191C00FB520062CF21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65706181C00FB520062CF21 /* AppDelegate.swift */; };
 		B657061B1C00FB520062CF21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B657061A1C00FB520062CF21 /* ViewController.swift */; };
 		B657061E1C00FB520062CF21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B657061C1C00FB520062CF21 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B63D738B1C0356630092DFCC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B65706151C00FB520062CF21 /* Quality Of Area.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quality Of Area.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B65706181C00FB520062CF21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B657061A1C00FB520062CF21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B63D738C1C0356630092DFCC /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +47,7 @@
 		B657060C1C00FB520062CF21 = {
 			isa = PBXGroup;
 			children = (
+				B63D738B1C0356630092DFCC /* MapKit.framework */,
 				B65706171C00FB520062CF21 /* Quality Of Area */,
 				B65706161C00FB520062CF21 /* Products */,
 			);

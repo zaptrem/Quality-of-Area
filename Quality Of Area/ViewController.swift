@@ -9,26 +9,47 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MKMapViewDelegate {
 
-    @IBOutlet weak var mainMap: MKMapView!
+    @IBOutlet weak var myMap: MKMapView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        //print(actualData[2]["geometry"]["coordinates"])
-
         
-        print("hello world.")
-        //print(actualData)
-        //print(getCrimeCoords())
+            
+            
+            let theSpan:MKCoordinateSpan = MKCoordinateSpanMake(0.01 , 0.01)
+            let location:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 45.612125, longitude: 22.948280)
+            let theRegion:MKCoordinateRegion = MKCoordinateRegionMake(location, theSpan)
+            
+            myMap.setRegion(theRegion, animated: true)
+            
+            var anotation = MKPointAnnotation()
+            anotation.coordinate = location
+            anotation.title = "The Location"
+            anotation.subtitle = "This is the location !!!"
+            myMap.addAnnotation(anotation)
+            
+            let longPress = UILongPressGestureRecognizer(target: self, action: "action:")
+            longPress.minimumPressDuration = 1.0
+            myMap.addGestureRecognizer(longPress)
+            
+            
+        }
         
-        //DEBUG:
-        var test = getCrimeCoords()
-        print(test[5])
-        
-    }
+        func action(gestureRecognizer:UIGestureRecognizer) {
+            var touchPoint = gestureRecognizer.locationInView(self.myMap)
+            var newCoord:CLLocationCoordinate2D = myMap.convertPoint(touchPoint, toCoordinateFromView: self.myMap)
+            
+            var newAnotation = MKPointAnnotation()
+            newAnotation.coordinate = newCoord
+            newAnotation.title = "New Location"
+            newAnotation.subtitle = getCrimesWithinMile(newCoord)
+            myMap.addAnnotation(newAnotation)
+            
+        }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
