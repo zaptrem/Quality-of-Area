@@ -21,7 +21,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
             
             
             let theSpan:MKCoordinateSpan = MKCoordinateSpanMake(0.01 , 0.01)
-            let location:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 45.612125, longitude: 22.948280)
+            let location:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 40.793262, longitude: -73.974448)
             let theRegion:MKCoordinateRegion = MKCoordinateRegionMake(location, theSpan)
             
             myMap.setRegion(theRegion, animated: true)
@@ -46,7 +46,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
             var newAnotation = MKPointAnnotation()
             newAnotation.coordinate = newCoord
             newAnotation.title = "New Location"
-            newAnotation.subtitle = getCrimesWithinMile(newCoord)
+            newAnotation.subtitle = "There are" + String(getCrimesWithinMile(newCoord)) + "crimes near here."
             myMap.addAnnotation(newAnotation)
             
         }

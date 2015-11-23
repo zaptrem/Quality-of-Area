@@ -25,9 +25,11 @@ let actualData = json["features"]
     for var index = 0; index < looper; index++ {
         
         //var coordinates = actualData[index]["geometry"]["coordinates"]
-        var lat = (actualData[index]["geometry"]["coordinates"][1]).stringValue
-        var long = actualData[index]["geometry"]["coordinates"][2].stringValue
+        var lat = actualData[index]["geometry"]["coordinates"][0].stringValue
+        var long = actualData[index]["geometry"]["coordinates"][1].stringValue
         //crimeCoords.append([[lat, long]])
+        //print(lat)
+        //print(long)
         
         crimeCoords.append(CLLocationCoordinate2D(latitude: Double(lat)!, longitude: Double(long)!))
         
@@ -49,22 +51,27 @@ func getCrimesWithinMile(loc: CLLocationCoordinate2D) -> Int {
     let crimeCoords = getCrimeCoords()
     
     for var index = 0; index < crimeCoords.count; index++ {
-        var getLat: CLLocationDegrees = crimeCoords[index].latitude
-        var getLon: CLLocationDegrees = crimeCoords[index].longitude
+        // They were backwards!
+        var getLon: CLLocationDegrees = crimeCoords[index].latitude
+        var getLat: CLLocationDegrees = crimeCoords[index].longitude
         var getConvertedCrimeLocation: CLLocation =  CLLocation(latitude: getLat, longitude: getLon)
         var getInputLat: CLLocationDegrees = loc.latitude
         var getInputLong: CLLocationDegrees = loc.longitude
         var getConvertedInputLocation: CLLocation = CLLocation(latitude: getInputLat, longitude: getInputLong)
         
         var distance = getConvertedInputLocation.distanceFromLocation(getConvertedCrimeLocation) / 1000
+        print(distance)
         if distance <= 1 {
             numOfCrimes++
+            print("yes")
             
+        } else {
+            // print("no")
         }
         
     }
     
-    print(numOfCrimes
+    print(numOfCrimes)
     
     return numOfCrimes
     
