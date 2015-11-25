@@ -44,6 +44,18 @@ let actualData = json["features"]
     return crimeCoords
 
 }
+func getCrimeData(location: Int) -> String {
+    //JSON decode code
+    let filePath = NSBundle.mainBundle().pathForResource("nyccrimedata2015", ofType: "json")
+    let data =  NSData(contentsOfFile: filePath!)
+    let json = JSON(data: data!)
+    let actualData = json["features"]
+    
+    var result = String(actualData[location]["properties"]["CR"])
+    
+    return result
+}
+
 func getCrimesWithinMile(loc: CLLocationCoordinate2D) -> Int {
     // Return number of crimes reported within a mi le of given coordinate
     var numOfCrimes:Int = 0
@@ -60,7 +72,7 @@ func getCrimesWithinMile(loc: CLLocationCoordinate2D) -> Int {
         var getConvertedInputLocation: CLLocation = CLLocation(latitude: getInputLat, longitude: getInputLong)
         
         var distance = getConvertedInputLocation.distanceFromLocation(getConvertedCrimeLocation) / 1000
-        print(distance)
+        //print(distance)
         if distance <= 1 {
             numOfCrimes++
             print("yes")
