@@ -9,6 +9,7 @@
 import Foundation
 import MapKit
 
+var crimeLocations = getCrimeCoords()
 // Calculate scores here. 
 
 func getCrimeCoords() -> Array<CLLocationCoordinate2D> {
@@ -36,11 +37,13 @@ let actualData = json["features"]
         //crimeCoords.append((actualData[index]["geometry"]["coordinates"]))
 
         //DEBUG: Prints the coord array (as it is being made?)
-        //print(actualData[index]["geometry"]["coordinates"])
+        print(actualData[index]["geometry"]["coordinates"])
+        
         
     
         
         }
+    //print(actualData.count)
     return crimeCoords
 
 }
@@ -60,7 +63,7 @@ func getCrimesWithinMile(loc: CLLocationCoordinate2D) -> Int {
     // Return number of crimes reported within a mi le of given coordinate
     var numOfCrimes:Int = 0
     
-    let crimeCoords = getCrimeCoords()
+    let crimeCoords = crimeLocations
     
     for var index = 0; index < crimeCoords.count; index++ {
         // They were backwards!
@@ -80,6 +83,7 @@ func getCrimesWithinMile(loc: CLLocationCoordinate2D) -> Int {
         } else {
             // print("no")
         }
+        
         
     }
     
