@@ -10,6 +10,9 @@ import Foundation
 import MapKit
 
 var crimeLocations = getCrimeCoords()
+var schoolCoords = getSchoolCoords()
+
+var satScores = getSatScores()
 // Calculate scores here. 
 
 func getCrimeCoords() -> Array<CLLocationCoordinate2D> {
@@ -37,7 +40,7 @@ let actualData = json["features"]
         //crimeCoords.append((actualData[index]["geometry"]["coordinates"]))
 
         //DEBUG: Prints the coord array (as it is being made?)
-        print(actualData[index]["geometry"]["coordinates"])
+        //print(actualData[index]["geometry"]["coordinates"])
         
         
     
@@ -78,7 +81,7 @@ func getCrimesWithinMile(loc: CLLocationCoordinate2D) -> Int {
         //print(distance)
         if distance <= 1 {
             numOfCrimes++
-            print("yes")
+            print("yesCrime")
             
         } else {
             // print("no")
@@ -92,4 +95,149 @@ func getCrimesWithinMile(loc: CLLocationCoordinate2D) -> Int {
     return numOfCrimes
     
 
+}
+func getSatAverage(loc: CLLocationCoordinate2D) -> Int {
+    
+    
+    let crimeCoords = crimeLocations
+    var satScores:Array = [Int]()
+    var thingToDivide = 0
+    
+    var index = 0
+    
+    //for var index = 0; index < crimeCoords.count; index++ {
+    print(getSatScores())
+    for (sat, crimeCoords) in getSatScores() {
+        // They were backwards!
+        var getLat: CLLocationDegrees = crimeCoords.latitude
+        var getLong: CLLocationDegrees = crimeCoords.longitude
+        var getConvertedCrimeLocation: CLLocation =  CLLocation(latitude: getLat, longitude: getLong)
+        var getInputLat: CLLocationDegrees = loc.latitude
+        var getInputLong: CLLocationDegrees = loc.longitude
+        //Lat and Long were accidently revered somewhere, and I don't have time to find out where right now, so I called lat long and long lat on the line below for a quick fix.) TODO: Fix!
+        var getConvertedInputLocation: CLLocation = CLLocation(latitude: getInputLong, longitude: getInputLat)
+        
+        var distance = getConvertedInputLocation.distanceFromLocation(getConvertedCrimeLocation) / 1000
+        //print(distance)
+        if distance <= 2 {
+            satScores.append(sat)
+            thingToDivide = thingToDivide + sat
+            print("yesSAT")
+            print(distance)
+            
+        } else {
+            print("noSAT")
+            print(distance)
+        }
+        
+        
+    }
+    print(thingToDivide)
+    print(satScores.count)
+    var satAverage = 0
+    if thingToDivide == 0 {
+        //No schools near by! Do something!
+        satAverage = 0
+        print("No Schools within 2km!")
+        
+    } else {
+        satAverage = thingToDivide / (satScores.count)
+        //print(satAverage)
+        
+        //print(satAverage)
+        
+        
+    }
+    print(satAverage)
+    
+
+    return satAverage
+    
+
+}
+
+func getSatScores() -> Dictionary<Int, CLLocationCoordinate2D> {
+    
+    var satData = [Int: CLLocationCoordinate2D]()
+    //JSON decode code
+    let filePath = NSBundle.mainBundle().pathForResource("SATscore", ofType: "json")
+    let data =  NSData(contentsOfFile: filePath!)
+    let json = JSON(data: data!)
+    let actualData = json["data"]
+    //Loop creates an array of coordinate arrays.
+    let looper = actualData.count
+    
+    
+    for var index = 0; index < looper; index++ {
+        
+        
+        if (actualData[index][11]).string == "s" {
+            print("Whoops, this school has no SAT results.")
+            
+        } else {
+        var schoolName = (String(actualData[index][9])).uppercaseString
+        var schoolCoordinate = schoolCoords[schoolName]
+        var satReading = String(actualData[index][11])
+        print(satReading)
+        var intsatReading = Int(satReading)
+        print(intsatReading)
+        var satMath = String(actualData[index][12])
+        var intsatMath = Int(satMath)
+        var satWriting = String(actualData[index][13])
+        var intsatWriting = Int(satWriting)
+        var satComposite = intsatReading!+intsatMath!+intsatWriting!
+        var address = "death"
+        
+        
+        //satData[satComposite] = CLLocationCoordinate2D(latitude: Double(lat)!, longitude: Double(long)!)
+        //print(satComposite)
+        satData[satComposite] = schoolCoordinate
+        
+
+        }
+        
+        
+        
+    }
+    
+    return satData
+}
+
+func getSchoolCoords() -> Dictionary<String, CLLocationCoordinate2D> {
+    //JSON decode code
+    let filePath = NSBundle.mainBundle().pathForResource("schooladdresses", ofType: "json")
+    let data =  NSData(contentsOfFile: filePath!)
+    let json = JSON(data: data!)
+    let actualData = json["data"]
+    //Loop creates an array of coordinate arrays.
+    let looper = actualData.count
+    
+    var schoolCoords:Dictionary = [String:CLLocationCoordinate2D]()
+    
+    for var index = 0; index < looper; index++ {
+        var schoolNamebefore = actualData[index][9].string!
+        var schoolName = schoolNamebefore.uppercaseString
+        
+        //var coordinates = actualData[index]["geometry"]["coordinates"]
+        var long = actualData[index][65][1].stringValue
+        var lat = actualData[index][65][2].stringValue
+        //crimeCoords.append([[lat, long]])
+        //print(lat)
+        //print(long)
+        
+        schoolCoords[schoolName] = CLLocationCoordinate2D(latitude: Double(lat)!, longitude: Double(long)!)
+        
+        //crimeCoords.append((actualData[index]["geometry"]["coordinates"]))
+        
+        //DEBUG: Prints the coord array (as it is being made?)
+        //print(actualData[index]["geometry"]["coordinates"]) -- ONLY FOR CRIME
+        
+        
+        
+        
+    }
+
+    
+    return schoolCoords
+    
 }

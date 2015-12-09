@@ -4,7 +4,7 @@
 //
 //  Created by Ryan Tremblay on 11/21/15.
 //  Copyright © 2015 Ryan Tremblay. All rights reserved.
-//
+// Fried chicken
 
 import UIKit
 import MapKit
@@ -26,12 +26,12 @@ class ViewController: UIViewController, MKMapViewDelegate {
             
             myMap.setRegion(theRegion, animated: true)
             
-            var anotation = MKPointAnnotation()
-            anotation.coordinate = location
-            anotation.title = "The Location"
-            anotation.subtitle = "This is the location !!!"
-            myMap.addAnnotation(anotation)
-            
+//            var anotation = MKPointAnnotation()
+//            anotation.coordinate = location
+//            anotation.title = "The Location"
+//            anotation.subtitle = "This is the location !!!"
+//            myMap.addAnnotation(anotation)
+        
             let longPress = UILongPressGestureRecognizer(target: self, action: "action:")
             longPress.minimumPressDuration = 1.0
             myMap.addGestureRecognizer(longPress)
@@ -46,7 +46,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
             var newAnotation = MKPointAnnotation()
             newAnotation.coordinate = newCoord
             newAnotation.title = "New Location"
-            newAnotation.subtitle = "There have been " + String(getCrimesWithinMile(newCoord)) + " crimes recorded near here."
+            newAnotation.subtitle = "Average SAT is " + String(getSatAverage(newCoord)) + ". Nmber of crimes is " + String(getCrimesWithinMile(newCoord))
             myMap.addAnnotation(newAnotation)
             
         }
