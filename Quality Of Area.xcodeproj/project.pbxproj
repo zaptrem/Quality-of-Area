@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8B2E480A2ED4C659497C76B2 /* Pods_Quality_Of_Area.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52CAE337F2FB74190FA07894 /* Pods_Quality_Of_Area.framework */; };
 		B63D738C1C0356630092DFCC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63D738B1C0356630092DFCC /* MapKit.framework */; };
-		B64A00261C13567E002DAFFC /* SATscore.json in Resources */ = {isa = PBXBuildFile; fileRef = B64A00251C13567E002DAFFC /* SATscore.json */; };
 		B65706191C00FB520062CF21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65706181C00FB520062CF21 /* AppDelegate.swift */; };
 		B657061B1C00FB520062CF21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B657061A1C00FB520062CF21 /* ViewController.swift */; };
 		B657061E1C00FB520062CF21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B657061C1C00FB520062CF21 /* Main.storyboard */; };
@@ -19,6 +18,7 @@
 		B66300631C1366900011E5F8 /* schooladdresses.json in Resources */ = {isa = PBXBuildFile; fileRef = B66300621C1366900011E5F8 /* schooladdresses.json */; };
 		B664E07D1C017933001A508F /* nyccrimedata2015.json in Resources */ = {isa = PBXBuildFile; fileRef = B664E07C1C017933001A508F /* nyccrimedata2015.json */; };
 		B664E07F1C01799B001A508F /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B664E07E1C01799B001A508F /* SwiftyJSON.swift */; };
+		B6A1E95C1C1B982400D8E8DC /* SATscore.json in Resources */ = {isa = PBXBuildFile; fileRef = B6A1E95B1C1B982400D8E8DC /* SATscore.json */; };
 		DB46349AD814512A3CF44F70 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B43AD873CD0E4550DDEB9C6 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +27,6 @@
 		5B43AD873CD0E4550DDEB9C6 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB75E191AA145F02CDA5758 /* Pods-Quality Of Area.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quality Of Area.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quality Of Area/Pods-Quality Of Area.debug.xcconfig"; sourceTree = "<group>"; };
 		B63D738B1C0356630092DFCC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		B64A00251C13567E002DAFFC /* SATscore.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = SATscore.json; path = ../../../Downloads/SATscore.json; sourceTree = "<group>"; };
 		B65706151C00FB520062CF21 /* Quality Of Area.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quality Of Area.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B65706181C00FB520062CF21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B657061A1C00FB520062CF21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +38,7 @@
 		B66300621C1366900011E5F8 /* schooladdresses.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schooladdresses.json; sourceTree = "<group>"; };
 		B664E07C1C017933001A508F /* nyccrimedata2015.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nyccrimedata2015.json; sourceTree = "<group>"; };
 		B664E07E1C01799B001A508F /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		B6A1E95B1C1B982400D8E8DC /* SATscore.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SATscore.json; sourceTree = "<group>"; };
 		BA0BBF351BAB9A365345F4AD /* Pods-Quality Of Area.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quality Of Area.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quality Of Area/Pods-Quality Of Area.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,8 +94,8 @@
 				B657061F1C00FB520062CF21 /* Assets.xcassets */,
 				B664E07C1C017933001A508F /* nyccrimedata2015.json */,
 				B664E07E1C01799B001A508F /* SwiftyJSON.swift */,
+				B6A1E95B1C1B982400D8E8DC /* SATscore.json */,
 				B66300621C1366900011E5F8 /* schooladdresses.json */,
-				B64A00251C13567E002DAFFC /* SATscore.json */,
 				B65706211C00FB520062CF21 /* LaunchScreen.storyboard */,
 				B65706241C00FB520062CF21 /* Info.plist */,
 			);
@@ -176,9 +176,9 @@
 				B66300631C1366900011E5F8 /* schooladdresses.json in Resources */,
 				B65706231C00FB520062CF21 /* LaunchScreen.storyboard in Resources */,
 				B664E07D1C017933001A508F /* nyccrimedata2015.json in Resources */,
-				B64A00261C13567E002DAFFC /* SATscore.json in Resources */,
 				B65706201C00FB520062CF21 /* Assets.xcassets in Resources */,
 				B657061E1C00FB520062CF21 /* Main.storyboard in Resources */,
+				B6A1E95C1C1B982400D8E8DC /* SATscore.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
