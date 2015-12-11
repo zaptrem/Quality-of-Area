@@ -19,10 +19,12 @@
 		B66300631C1366900011E5F8 /* schooladdresses.json in Resources */ = {isa = PBXBuildFile; fileRef = B66300621C1366900011E5F8 /* schooladdresses.json */; };
 		B664E07D1C017933001A508F /* nyccrimedata2015.json in Resources */ = {isa = PBXBuildFile; fileRef = B664E07C1C017933001A508F /* nyccrimedata2015.json */; };
 		B664E07F1C01799B001A508F /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B664E07E1C01799B001A508F /* SwiftyJSON.swift */; };
+		DB46349AD814512A3CF44F70 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B43AD873CD0E4550DDEB9C6 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		52CAE337F2FB74190FA07894 /* Pods_Quality_Of_Area.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quality_Of_Area.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B43AD873CD0E4550DDEB9C6 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB75E191AA145F02CDA5758 /* Pods-Quality Of Area.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quality Of Area.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quality Of Area/Pods-Quality Of Area.debug.xcconfig"; sourceTree = "<group>"; };
 		B63D738B1C0356630092DFCC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B64A00251C13567E002DAFFC /* SATscore.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = SATscore.json; path = ../../../Downloads/SATscore.json; sourceTree = "<group>"; };
@@ -47,6 +49,7 @@
 			files = (
 				B63D738C1C0356630092DFCC /* MapKit.framework in Frameworks */,
 				8B2E480A2ED4C659497C76B2 /* Pods_Quality_Of_Area.framework in Frameworks */,
+				DB46349AD814512A3CF44F70 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				52CAE337F2FB74190FA07894 /* Pods_Quality_Of_Area.framework */,
+				5B43AD873CD0E4550DDEB9C6 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -193,7 +197,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Quality Of Area/Pods-Quality Of Area-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8A4A6D6F8561DDEBD76A6BA5 /* Copy Pods Resources */ = {
@@ -208,7 +212,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Quality Of Area/Pods-Quality Of Area-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C72674FDF1FDA735C67B782E /* Check Pods Manifest.lock */ = {

@@ -241,3 +241,31 @@ func getSchoolCoords() -> Dictionary<String, CLLocationCoordinate2D> {
     return schoolCoords
     
 }
+
+func getYelpAverage(loc: CLLocationCoordinate2D) -> Int {
+    let postEndpoint: String = "http://jsonplaceholder.typicode.com/posts/1"
+    Alamofire.request(.GET, postEndpoint)
+        .responseJSON { response in
+            guard response.result.error == nil else {
+                // got an error in getting the data, need to handle it
+                print("error calling GET on /posts/1")
+                print(response.result.error!)
+                return
+            }
+            
+            if let value: AnyObject = response.result.value {
+                // handle the results as JSON, without a bunch of nested if loops
+                let post = JSON(value)
+                // now we have the results, let's just print them though a tableview would definitely be better UI:
+                print("The post is: " + post.description)
+                if let title = post["title"].string {
+                    // to access a field:
+                    print("The title is: " + title)
+                } else {
+                    print("error parsing /posts/1")
+                }
+            }
+    }
+    
+    
+}
