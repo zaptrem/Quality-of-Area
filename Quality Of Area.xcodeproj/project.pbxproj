@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8B2E480A2ED4C659497C76B2 /* Pods_Quality_Of_Area.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52CAE337F2FB74190FA07894 /* Pods_Quality_Of_Area.framework */; };
 		B63D738C1C0356630092DFCC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63D738B1C0356630092DFCC /* MapKit.framework */; };
 		B65706191C00FB520062CF21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65706181C00FB520062CF21 /* AppDelegate.swift */; };
 		B657061B1C00FB520062CF21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B657061A1C00FB520062CF21 /* ViewController.swift */; };
@@ -15,17 +14,18 @@
 		B65706201C00FB520062CF21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B657061F1C00FB520062CF21 /* Assets.xcassets */; };
 		B65706231C00FB520062CF21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B65706211C00FB520062CF21 /* LaunchScreen.storyboard */; };
 		B657062B1C00FDF10062CF21 /* ScoreCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = B657062A1C00FDF10062CF21 /* ScoreCalc.swift */; };
+		B65D469A1C1BCEED009B02A7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65D46991C1BCEED009B02A7 /* Alamofire.framework */; };
 		B66300631C1366900011E5F8 /* schooladdresses.json in Resources */ = {isa = PBXBuildFile; fileRef = B66300621C1366900011E5F8 /* schooladdresses.json */; };
 		B664E07D1C017933001A508F /* nyccrimedata2015.json in Resources */ = {isa = PBXBuildFile; fileRef = B664E07C1C017933001A508F /* nyccrimedata2015.json */; };
 		B664E07F1C01799B001A508F /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B664E07E1C01799B001A508F /* SwiftyJSON.swift */; };
 		B6A1E95C1C1B982400D8E8DC /* SATscore.json in Resources */ = {isa = PBXBuildFile; fileRef = B6A1E95B1C1B982400D8E8DC /* SATscore.json */; };
-		DB46349AD814512A3CF44F70 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B43AD873CD0E4550DDEB9C6 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		52CAE337F2FB74190FA07894 /* Pods_Quality_Of_Area.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quality_Of_Area.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B43AD873CD0E4550DDEB9C6 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB75E191AA145F02CDA5758 /* Pods-Quality Of Area.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quality Of Area.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quality Of Area/Pods-Quality Of Area.debug.xcconfig"; sourceTree = "<group>"; };
+		9FFB9199350E1452994702FD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B63D738B1C0356630092DFCC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B65706151C00FB520062CF21 /* Quality Of Area.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quality Of Area.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B65706181C00FB520062CF21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,11 +35,13 @@
 		B65706221C00FB520062CF21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B65706241C00FB520062CF21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B657062A1C00FDF10062CF21 /* ScoreCalc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreCalc.swift; sourceTree = "<group>"; };
+		B65D46991C1BCEED009B02A7 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		B66300621C1366900011E5F8 /* schooladdresses.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schooladdresses.json; sourceTree = "<group>"; };
 		B664E07C1C017933001A508F /* nyccrimedata2015.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nyccrimedata2015.json; sourceTree = "<group>"; };
 		B664E07E1C01799B001A508F /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		B6A1E95B1C1B982400D8E8DC /* SATscore.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SATscore.json; sourceTree = "<group>"; };
 		BA0BBF351BAB9A365345F4AD /* Pods-Quality Of Area.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quality Of Area.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quality Of Area/Pods-Quality Of Area.release.xcconfig"; sourceTree = "<group>"; };
+		DD679FABC7EC14D09A065880 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,9 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B65D469A1C1BCEED009B02A7 /* Alamofire.framework in Frameworks */,
 				B63D738C1C0356630092DFCC /* MapKit.framework in Frameworks */,
-				8B2E480A2ED4C659497C76B2 /* Pods_Quality_Of_Area.framework in Frameworks */,
-				DB46349AD814512A3CF44F70 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +62,8 @@
 			children = (
 				9CB75E191AA145F02CDA5758 /* Pods-Quality Of Area.debug.xcconfig */,
 				BA0BBF351BAB9A365345F4AD /* Pods-Quality Of Area.release.xcconfig */,
+				DD679FABC7EC14D09A065880 /* Pods.debug.xcconfig */,
+				9FFB9199350E1452994702FD /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -105,6 +108,7 @@
 		CF0762B37CBE250568CF1228 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B65D46991C1BCEED009B02A7 /* Alamofire.framework */,
 				52CAE337F2FB74190FA07894 /* Pods_Quality_Of_Area.framework */,
 				5B43AD873CD0E4550DDEB9C6 /* Pods.framework */,
 			);
@@ -342,6 +346,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -349,11 +354,15 @@
 		};
 		B65706281C00FB520062CF21 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9CB75E191AA145F02CDA5758 /* Pods-Quality Of Area.debug.xcconfig */;
+			baseConfigurationReference = DD679FABC7EC14D09A065880 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "Quality Of Area/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "RyanTremblay.Quality-Of-Area";
@@ -364,11 +373,15 @@
 		};
 		B65706291C00FB520062CF21 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BA0BBF351BAB9A365345F4AD /* Pods-Quality Of Area.release.xcconfig */;
+			baseConfigurationReference = 9FFB9199350E1452994702FD /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "Quality Of Area/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "RyanTremblay.Quality-Of-Area";

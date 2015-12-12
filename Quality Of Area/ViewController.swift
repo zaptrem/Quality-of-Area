@@ -46,7 +46,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
             var newAnotation = MKPointAnnotation()
             newAnotation.coordinate = newCoord
             newAnotation.title = "New Location"
-            newAnotation.subtitle = "Average SAT is " + String(getSatAverage(newCoord)) + ". Nmber of crimes is " + String(getCrimesWithinMile(newCoord))
+            newAnotation.subtitle = "SAT A:" + String(getSatAverage(newCoord)) + ". Crimes: " + String(getCrimesWithinMile(newCoord)) + "Score: " + String(getScore(newCoord))
             myMap.addAnnotation(newAnotation)
             
         }
