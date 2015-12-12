@@ -28,12 +28,21 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emH-Nb-MpH">
+                                <rect key="frame" x="250" y="564" width="105" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Load Heat Map"/>
+                                <connections>
+                                    <action selector="loadHeatMapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xKO-zZ-APi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="bottomLeftLabel" destination="607-q0-1Fa" id="Wz5-bJ-Ptf"/>
                         <outlet property="myMap" destination="wZn-Dz-w2I" id="hCa-dT-TOv"/>
                     </connections>
                 </viewController>

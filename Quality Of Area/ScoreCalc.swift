@@ -82,7 +82,7 @@ func getCrimesWithinMile(loc: CLLocationCoordinate2D) -> Int {
         //print(distance)
         if distance <= 1 {
             numOfCrimes++
-            print("yesCrime")
+            //print("yesCrime")
             
         } else {
             // print("no")
@@ -91,7 +91,7 @@ func getCrimesWithinMile(loc: CLLocationCoordinate2D) -> Int {
         
     }
     
-    print(numOfCrimes)
+    //print(numOfCrimes)
     
     return numOfCrimes
     
@@ -107,7 +107,7 @@ func getSatAverage(loc: CLLocationCoordinate2D) -> Int {
     var index = 0
     
     //for var index = 0; index < crimeCoords.count; index++ {
-    print(getSatScores())
+    //print(getSatScores())
     for (sat, crimeCoords) in getSatScores() {
         // They were backwards!
         var getLat: CLLocationDegrees = crimeCoords.latitude
@@ -123,18 +123,18 @@ func getSatAverage(loc: CLLocationCoordinate2D) -> Int {
         if distance <= 2 {
             satScores.append(sat)
             thingToDivide = thingToDivide + sat
-            print("yesSAT")
-            print(distance)
+            //print("yesSAT")
+            //print(distance)
             
         } else {
-            print("noSAT")
-            print(distance)
+            //print("noSAT")
+            //print(distance)
         }
         
         
     }
-    print(thingToDivide)
-    print(satScores.count)
+    //print(thingToDivide)
+    //print(satScores.count)
     var satAverage = 0
     if thingToDivide == 0 {
         //No schools near by! Do something!
@@ -149,7 +149,7 @@ func getSatAverage(loc: CLLocationCoordinate2D) -> Int {
         
         
     }
-    print(satAverage)
+    //print(satAverage)
     
 
     return satAverage
@@ -173,15 +173,15 @@ func getSatScores() -> Dictionary<Int, CLLocationCoordinate2D> {
         
         
         if (actualData[index][11]).string == "s" {
-            print("Whoops, this school has no SAT results.")
+            //print("Whoops, this school has no SAT results.")
             
         } else {
         var schoolName = (String(actualData[index][9])).uppercaseString
         var schoolCoordinate = schoolCoords[schoolName]
         var satReading = String(actualData[index][11])
-        print(satReading)
+        //print(satReading)
         var intsatReading = Int(satReading)
-        print(intsatReading)
+        //print(intsatReading)
         var satMath = String(actualData[index][12])
         var intsatMath = Int(satMath)
         var satWriting = String(actualData[index][13])
