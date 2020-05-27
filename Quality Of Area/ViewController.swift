@@ -85,13 +85,17 @@ class ViewController: UIViewController, MKMapViewDelegate {
             let theRegion:MKCoordinateRegion = MKCoordinateRegionMake(location, theSpan)
             
             myMap.setRegion(theRegion, animated: true)
+        if(!NSUserDefaults.standardUserDefaults().boolForKey("firstlaunch1.0")){
+            var anotation = MKPointAnnotation()
+            anotation.coordinate = location
+            anotation.title = "The location you have selected"
+            anotation.subtitle = "This line shows how many crimes there have been within a mile of your pin"
+            myMap.addAnnotation(anotation)
             
-//            var anotation = MKPointAnnotation()
-//            anotation.coordinate = location
-//            anotation.title = "The Location"
-//            anotation.subtitle = "This is the location !!!"
-//            myMap.addAnnotation(anotation)
-        
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "firstlaunch1.0")
+            NSUserDefaults.standardUserDefaults().synchronize();
+            
+           
             let longPress = UILongPressGestureRecognizer(target: self, action: "action:")
             longPress.minimumPressDuration = 1.0
             myMap.addGestureRecognizer(longPress)
